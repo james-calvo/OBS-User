@@ -1,0 +1,238 @@
+
+/*---------- Navigation ----------*/
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    padding-left: 0px;
+}
+.line img {
+    height: auto;
+    margin-right: 800px;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    display: inline;
+    margin-left: 5px;
+}
+
+.menu ul li a {
+    color: #000000;
+    text-decoration: none;
+    margin-top: 50px;
+    font-weight: bold;
+    font-family: sans-serif;
+   margin-left: 10px;
+}
+
+.menu ul li a:hover {
+    color: #ccc;
+}
+
+/* ------------ Content ------------*/
+
+.wide-image {
+    width: 100%;
+    overflow: hidden; /* Ensure the image doesn't overflow its container */
+}
+
+.wide-image img {
+    width: 95%; /* Make the image fill its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove any default inline spacing */
+    margin: auto;
+}
+
+
+/* ------------ Content ------------*/
+.container {
+    position: absolute;
+    border-radius: 30px;
+    bottom: 0; /* Position at the bottom */
+    left: 50%; /* Start from the center */
+    transform: translateX(-50%); /* Move back by half of its width */
+    width: 85%; /* Occupy 90% of the width */
+    margin: 0 auto; /* Center the container horizontally */
+    margin-bottom: -450px; /* Adjust this value to overlap as desired */
+    background-color: #E6E6E6; /* Add opacity to the background */
+    z-index: 1; /* Ensure it's above the wide image */
+}
+
+
+.filter-icon {
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.campus-navigation {
+    display: inline-flex;
+    
+}
+
+.campus-navigation a {
+    margin-left: 20px; /* Add space between links */
+    margin-top: -65px;
+    color: #000000;
+    text-decoration: none;
+    font-family: sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.campus-navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for the first and second floor containers */
+.first-container, .second-container {
+    width: 90%;
+    margin: 20px auto; /* Add margin between floors and center horizontally */
+    padding: 20px;
+    background-color: rgb(255, 255, 255); /* Red color for the floor containers */
+    border-radius: 10px; /* Add border radius */
+}
+
+.first-floor h2, .second-floor h2 {
+    margin-bottom: 10px; /* Add margin below the floor title */
+    font-family: sans-serif;
+    padding-left: 50px;
+    font-size: large;
+}
+
+.floor-button1, .floor-button2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Add gap between buttons */
+}
+
+.floor-button1 button, .floor-button2 button {
+    flex: 0 0 calc((70% - 20px) / 3);
+    width: 20%; /* Set fixed width for the buttons */
+    height: 40px; /* Set fixed height for the buttons */
+    padding: 8px 12px; /* Adjust padding to center the content vertically */
+    background-color: #292929;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+
+/* Media Query for Standard Mobile Devices */
+@media only screen and (max-width: 600px) {
+    /* Set fixed width for the website */
+    body {
+        width: 600px; /* Adjust as needed */
+        margin: 0 auto; /* Center the website horizontally */
+    }
+
+    /* Navigation */
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .logo img {
+        width: 50px;
+        height: auto;
+    }
+
+    .menu ul {
+        margin-top: 10px;
+    }
+
+    .menu ul li {
+        margin: 5px 0;
+    }
+
+    /* Container */
+    .container {
+        width: 100%;
+        margin: 20px auto -150px; /* Adjust margin to ensure overlap with wide image */
+        padding: 20px;
+        background-color: #E6E6E6;
+        border-radius: 10px;
+        position: relative; /* Ensure container maintains its position */
+        margin-top: -20px;
+        z-index: 1; /* Ensure container stays above the wide image */
+    }
+
+    /* Filter Icon and Campus Navigation */
+    .filter-icon, .campus-navigation {
+        margin-top: 20px;
+    }
+
+    .campus-navigation a {
+        margin-left: 10px;
+    }
+
+    /* Floor Containers */
+    .first-container, .second-container {
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .first-floor h2, .second-floor h2 {
+        padding-left: 10px;
+        font-size: medium;
+    }
+
+    /* Floor Buttons */
+    .floor-button1, .floor-button2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .floor-button1 button, .floor-button2 button {
+        width: calc((10% - 30px) / 3);
+        padding: 8px 12px;
+        font-size: small;
+    }
+
+    /* Wide Image */
+    .wide-image {
+        position: relative; /* Ensure wide image maintains its position */
+        overflow: hidden; /* Hide any overflow content */
+    }
+
+    .wide-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ensure correct positioning of logo and navigation items */
+    .logo {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+    }
+
+    .menu {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+}
